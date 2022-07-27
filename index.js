@@ -17,13 +17,16 @@ const arDrive = arDriveFactory({ wallet: myWallet })
 // })
 
 async function createDive() {
-  // const createDriveResult = await arDrive.createPublicDrive({
-  //   driveName: 'aaron12.0',
-  // })
+  const createDriveResult = await arDrive.movePublicFile({
+    fileId: '8188bc26-e7a6-43a7-ad97-d5fa6ffe028d',
+    newParentFolderId: '63495591-fd56-4e12-b0f6-802ebcecc1f9',
+  })
   // console.log(createDriveResult.created[0].entityId['entityId'])
   // console.log(createDriveResult.created[1].entityId['entityId'])
 
-  uploadFile('c7664d68-efe4-4603-b995-8e37ae6163e1')
+  console.log(createDriveResult)
+
+  // uploadFile('90116e42-b13e-4a9a-8845-3ae4ccb8d830')
 }
 
 async function uploadFile(eID) {
